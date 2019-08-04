@@ -1,5 +1,5 @@
 import config from '../config'
-var OAuth = require('OAuth');
+var OAuth = require('oauth');
 
 export class TwitterApi {
 
