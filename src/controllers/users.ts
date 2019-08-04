@@ -20,7 +20,7 @@ export class User {
             }
             let url: string = config.UserShowURL + "?user_id=" + id;
 
-            console.log("request url:"+url)
+            //console.log("request url:"+url)
             this.apiInstance.api(url)
                 .then(data => {
                     //console.log(JSON.stringify(data));
