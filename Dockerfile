@@ -2,7 +2,7 @@ FROM node
 
 MAINTAINER Robin Cai <caiyuantian@gmail.com>
 
-WORKDIR /home/ubuntu/www/elmo/backend
+WORKDIR /home/ubuntu/elmo/backend
 
 EXPOSE 8000
 
