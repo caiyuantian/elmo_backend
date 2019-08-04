@@ -1,14 +1,19 @@
-FROM node
+FROM node:10.16.1-alpine
 
 MAINTAINER Robin Cai <caiyuantian@gmail.com>
 
-WORKDIR /home/ubuntu/elmo/backend
+RUN mkdir -p /home/elmo/backend
 
-COPY package*.json ./
+WORKDIR /home/elmo/backend
+
+COPY . .
 
 RUN npm install
 
-EXPOSE 8000
+RUN npm install grunt
 
-CMD ["npm","run","grunt"]
-CMD ["npm","start"]
+RUN npm run grunt
+
+EXPOSE 5000
+
+CMD ["npm", "start"]
